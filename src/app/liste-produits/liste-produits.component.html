@@ -1,0 +1,22 @@
+<app-recherche-produits (searchEvent)="applyFilters($event)"></app-recherche-produits>
+<div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Description</th>
+          <th>Prix</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produit of filteredProducts">
+          <td>{{ produit.id }}</td>
+          <td>{{ produit.name }}</td>
+          <td>{{ produit.description }}</td>
+          <td>{{ produit.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+  
